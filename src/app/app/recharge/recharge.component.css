@@ -1,5 +1,8 @@
 #phone{
 outline: 0;
+
+height: 45px;
+
 }
 #phone:valid{
 border-color: green;
