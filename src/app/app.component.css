@@ -23,7 +23,6 @@
 .navbar .navbar-nav .nav-link {
   display: inline-block;
     cursor: pointer;
-    text-transform: uppercase;
     justify-content: space-evenly;
   color: var(--bs-white);
   font-size: 18px;
