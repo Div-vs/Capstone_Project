@@ -11,6 +11,8 @@ import { LoginComponent } from './app/login/login.component';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { ReactiveFormsModule,FormsModule } from '@angular/forms';
 import { RechargeComponent } from './app/recharge/recharge.component';
+import { ViewplanComponent } from './app/viewplan/viewplan.component';
+import { SignupComponent } from './app/signup/signup.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +20,8 @@ import { RechargeComponent } from './app/recharge/recharge.component';
     HomeComponent,
     LoginComponent,
     RechargeComponent,
+    ViewplanComponent,
+    SignupComponent,
   ],
   imports: [
     BrowserModule,
