@@ -1,5 +1,8 @@
 #phone{
 outline: 0;
+
+height: 45px;
+
 }
 #phone:valid{
 border-color: green;
@@ -7,6 +10,7 @@ border-color: green;
 #phone:focus:invalid{
 border-color: red;
 }
+
 .about-btn {
 	color: #8e1efc;
 	padding: 10px 40px;

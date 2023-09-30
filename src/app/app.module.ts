@@ -20,6 +20,7 @@ import { ViewplanComponent } from './app/viewplan/viewplan.component';
     LoginComponent,
     RechargeComponent,
     ViewplanComponent,
+
   ],
   imports: [
     BrowserModule,

@@ -14,10 +14,16 @@
         <div class="modal-body">
             <form class="">
                 <div class="form-floating mb-3">
-                  <input  id="phone" type="tel" required pattern="[0-9]{3}[0-9]{3}[0-9]{4}" class="form-control rounded-3"  placeholder="XX-XXXXX XXXXX">
+                  <input  id="phone" type="tel" [(ngModel)]="userInput" maxlength="10" pattern="[0-9]{3}[0-9]{3}[0-9]{4}" class="form-control rounded-3"  placeholder="XXXXX XXXXX">
                   <label for="floatingInput">Mobile Number</label>
+                  <div *ngIf="userInput.length < 10 " class="error-message1">
+                    Enter your 10-digit Mobile Number!
                 </div>
-                <button class="w-100 mb-2 btn btn-lg rounded-3 btn-primary" type="submit">Continue</button>
+                </div>
+                
+                
+                <!-- <div *ngIf="userInput.length==10" class="correct">Valid-Number</div> -->
+                <button  routerLink="/viewplan" class="w-100 mb-2 btn btn-lg rounded-3 btn-primary" type="submit" routerLinkActive="active">Continue</button>
        
               </form>
         </div>
