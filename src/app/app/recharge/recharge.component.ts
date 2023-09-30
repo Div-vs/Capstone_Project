@@ -19,4 +19,12 @@ export class RechargeComponent implements OnInit {
   closePopup() {
     this.displayStyle = "none";
   }
+
+  userInput: string = '';
+
+  // onInputChange() {
+  //   if (this.userInput.length < 10) {
+  //     this.userInput = this.userInput.slice(0, 10); 
+  //   }
+  // }
 }
