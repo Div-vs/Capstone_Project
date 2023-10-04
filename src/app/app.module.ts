@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
@@ -12,6 +11,7 @@ import { ModalModule } from 'ngx-bootstrap/modal';
 import { ReactiveFormsModule,FormsModule } from '@angular/forms';
 import { RechargeComponent } from './app/recharge/recharge.component';
 import { ViewplanComponent } from './app/viewplan/viewplan.component';
+import { SignupComponent } from './app/signup/signup.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +20,7 @@ import { ViewplanComponent } from './app/viewplan/viewplan.component';
     LoginComponent,
     RechargeComponent,
     ViewplanComponent,
+    SignupComponent
 
   ],
   imports: [

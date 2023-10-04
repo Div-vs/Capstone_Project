@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder } from '@angular/forms';
 import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 
 @Component({
@@ -7,6 +8,7 @@ import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
   styleUrls: ['./recharge.component.css']
 })
 export class RechargeComponent implements OnInit {
+myform:FormBuilder;
   constructor() {}
 
   ngOnInit() {}
@@ -27,4 +29,6 @@ export class RechargeComponent implements OnInit {
   //     this.userInput = this.userInput.slice(0, 10); 
   //   }
   // }
+  
+
 }
