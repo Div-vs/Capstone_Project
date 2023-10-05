@@ -15,6 +15,6 @@ export class LoginComponent {
   closePopup() {
     this.displayStyle = "none";
   }
-  
+  login: string = '';
 
 }
