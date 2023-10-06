@@ -12,6 +12,8 @@ import { ReactiveFormsModule,FormsModule } from '@angular/forms';
 import { RechargeComponent } from './app/recharge/recharge.component';
 import { ViewplanComponent } from './app/viewplan/viewplan.component';
 import { SignupComponent } from './app/signup/signup.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,11 @@ import { SignupComponent } from './app/signup/signup.component';
     CarouselModule.forRoot(),
     ModalModule.forRoot(),
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
+    ToastrModule.forRoot(),
+    
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
