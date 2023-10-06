@@ -1,9 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup,NgForm, Validators, FormsModule } from '@angular/forms';
-import { Router } from '@angular/router';
-import { ToastrService } from 'ngx-toastr';
-import { CustserviceService } from 'src/app/custservice.service';
-import { telecomcustomers } from 'src/app/telecomcustomers';
+import { FormBuilder, FormControl, FormGroup,NgForm, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-signup',
@@ -17,14 +13,7 @@ registerForm!:FormGroup;
 submitted=false;
 
 
-// Toast toast = Toast.makeText(this, "This is a toast that is centered onscreen but the text isn't centered", Toast.LENGTH_SHORT);
-// toast.setGravity(Gravity.CENTER, 0, 0);
-// toast.show();
-
-
-Cust:telecomcustomers= new telecomcustomers("","","","");
-msg:any;
-constructor(private formBuilder: FormBuilder,private serv:CustserviceService,private router:Router,private msg1:ToastrService) {
+constructor(private formBuilder: FormBuilder) {
   this.registerForm = this.formBuilder.group({
     firstName: new FormControl('', [
       Validators.required,
@@ -66,31 +55,8 @@ constructor(private formBuilder: FormBuilder,private serv:CustserviceService,pri
   
 onRegistrationFormSubmit() {
   this.submitted = true;
-  if(this.registerForm.valid){    
-    
-    //console.log(this.registerForm.value);
-    // let res = this.serv.CustomerRegister(this.Cust);
-    // res.subscribe((data)=>this.msg=data);
-    this.serv.CustomerRegister(this.Cust).subscribe(data=>
-      {
-        if(data!=null){
-        this.msg1.success("Successful Registration!",undefined,{
-          positionClass:'toast-top-center'
-        })
-      }else{
-        this.msg1.error("Customer with this Phone Number Already Exists !",
-    undefined,{
-      positionClass:'toast-top-center'
-    });
-
-      }
-      })
-    
-  }else{
-    this.msg1.error("Provide Valid Details. Fill in the details appropriately",
-    undefined,{
-      positionClass:'toast-top-center'
-    });
+  if(this.registerForm.valid){      
+    console.log("User Registration Form Submit", this.registerForm.value);
   }
   
 }

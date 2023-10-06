@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder } from '@angular/forms';
 import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 
 @Component({
@@ -8,30 +8,27 @@ import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
   styleUrls: ['./recharge.component.css']
 })
 export class RechargeComponent implements OnInit {
+myform:FormBuilder;
+  constructor() {}
 
-  formVar: FormGroup;
-
-  constructor(private fb: FormBuilder) {}
-
- 
-
-  ngOnInit() {
-
-    this.formVar = this.fb.group({
-
-      rec:String
-
-    });
-
-  }
-
-
-  public recharge: string ;
-
-  check() {
-
-    console.log(this.formVar.value);
+  ngOnInit() {}
   
+  displayStyle = "none";
+  
+  openPopup() {
+    this.displayStyle = "block";
   }
+  closePopup() {
+    this.displayStyle = "none";
+  }
+
+  userInput: string = '';
+
+  // onInputChange() {
+  //   if (this.userInput.length < 10) {
+  //     this.userInput = this.userInput.slice(0, 10); 
+  //   }
+  // }
+  
 
 }
