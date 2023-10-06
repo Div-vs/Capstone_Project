@@ -2,3 +2,6 @@ h1{
     font-size: 30px;
     font-weight: bolder;
 }
+.toast {
+    margin-top: 50px !important;
+}

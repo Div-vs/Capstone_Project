@@ -1,66 +1,125 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
 </head>
+
 <body>
+
   <!-- topbar -->
+
   <div class="container-fluid py-2 d-none d-md-flex" style="background-color: #003F88;">
+
     <div class="container">
+
         <div class="d-flex justify-content-between topbar">
+
             <div class="top-info">
+
                 <small class="me-3 text-white"><a href="#"><i class="fas fa-map-marker-alt me-2 text-white"></i></a>India</small>
+
                 <small class="me-3 text-white"><a href="#"><i class="fas fa-envelope me-2 text-white"></i></a>pfs@gmail.com</small>
+
             </div>
+
             <div class="top-link">
+
                 <a href="" class="bg-light nav-fill btn btn-sm-square rounded-circle"><i class="fab fa-facebook-f text-primary"></i></a>
+
                 <a href="" class="bg-light nav-fill btn btn-sm-square rounded-circle"><i class="fab fa-twitter text-primary"></i></a>
+
                 <a href="" class="bg-light nav-fill btn btn-sm-square rounded-circle"><i class="fab fa-instagram text-primary"></i></a>
+
                 <a href="" class="bg-light nav-fill btn btn-sm-square rounded-circle me-0"><i class="fab fa-linkedin-in text-primary"></i></a>
+
             </div>
+
         </div>
+
+    </div>
+
+ 
+
+</div>
+
+<!-- topbar-end -->
+
+<!-- navbar -->
+
+<div class="container-fluid" style="background-color: #FFD500; height: 50px;" >
+
+    <div class="container">
+
+        <nav class="navbar navbar-dark navbar-expand-lg py-0">
+
+            <!-- <a href="index.html" class="navbar-brand">
+
+                <h1 class="text-white fw-bold">Pfs<span class="text-dark">System</span> </h1>
+
+            </a> -->
+
+            <button type="button" class="navbar-toggler me-0" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+            <div class="collapse navbar-collapse bg-transparent" id="navbarCollapse">
+
+                <div class="navbar-nav ms-auto mx-xl-auto">
+
+                    <a routerLink="/home" routerLinkActive="active"  class="nav-item nav-link "><i class="fa-solid fa-house"></i>Home</a>
+
+                    <div class="nav-item dropdown " >
+
+                        <a href="#" class="nav-link dropdown-toggle " data-bs-toggle="dropdown"  >Pre-paid</a>
+
+                        <div class="dropdown-menu rounded" style="background-color: #FFD500; " >
+
+                            <a routerLink="/recharge" routerLinkActive="active" class="dropdown-item">Recharge</a>
+
+                            <a routerLink="/signup" routerLinkActive="active"  class="dropdown-item">Get new sim</a>
+
+                            <a routerLink="/viewplan" routerLinkActive="active"  class="dropdown-item">View plans</a>
+
+                        </div>
+
+                    </div>
+
+                    <a routerLink="/login" routerLinkActive="active"  class="nav-item nav-link"><i class="fa-solid fa-user" ></i>Login</a>
+
+                </div>
+
+            </div>
+
+        </nav>
+
     </div>
 
 </div>
-<!-- topbar-end -->
-<!-- navbar -->
-<div class="container-fluid" style="background-color: #FFD500; height: 50px;" >
-    <div class="container">
-        <nav class="navbar navbar-dark navbar-expand-lg py-0">
-            <!-- <a href="index.html" class="navbar-brand">
-                <h1 class="text-white fw-bold">Pfs<span class="text-dark">System</span> </h1>
-            </a> -->
-            <button type="button" class="navbar-toggler me-0" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse bg-transparent" id="navbarCollapse">
-                <div class="navbar-nav ms-auto mx-xl-auto">
-                    <a routerLink="/home" routerLinkActive="active"  class="nav-item nav-link "><i class="fa-solid fa-house"></i>Home</a>
-                    <div class="nav-item dropdown " >
-                        <a href="#" class="nav-link dropdown-toggle " data-bs-toggle="dropdown"  >Pre-paid</a>
-                        <div class="dropdown-menu rounded" style="background-color: #FFD500; " >
-                            <a routerLink="/recharge" routerLinkActive="active" class="dropdown-item">Recharge</a>
-                            <a routerLink="/signup" routerLinkActive="active"  class="dropdown-item">Get new sim</a>
-                            <a routerLink="/viewplan" routerLinkActive="active"  class="dropdown-item">View plans</a>
-                        </div>
-                    </div>
-                    <a routerLink="/login" routerLinkActive="active"  class="nav-item nav-link"><i class="fa-solid fa-user" ></i>Login</a>
-                </div>
-            </div>
-        </nav>
-    </div>
-</div>
+
 <!-- navbar-end -->
 
+ 
 
+ 
+
+ 
 
 <h1></h1>
+
 </body>
+
 <router-outlet></router-outlet>
+
 </html>
-
-
-

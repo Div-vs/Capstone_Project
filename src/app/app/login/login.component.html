@@ -1,77 +1,145 @@
-<!-- 
 <!DOCTYPE html>
-<html lang="en">
+
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>PFS Login Page</title>
+    <meta charset="utf-8" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <meta name="description" content="" />
+
+    <meta name="viewport" content="width=device-width,
+
+                                initial-scale=1" />
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <style>
+
+       
+
+    </style>
+
 </head>
-<body>
-    <div class="b-example-divider"></div>
 
-<div class="modal modal-sheet position-static d-block bg-body-secondary p-4 py-md-5" tabindex="-1" role="dialog" id="modalSignin">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content rounded-4 shadow">
-      <div class="modal-header p-5 pb-4 border-bottom-0">
-        <h1 class="fw-bold mb-0 fs-2">WELCOME!<h4>Log in to unlock a world of digital experiences.</h4></h1><br>
-        
-        <button type="button" #closebutton class="close" data-dismiss="modal">&times;</button>
+ 
+
+<body>
+
+   
+
+    <div class="loader" role="status" *ngIf="loader">
+
+        <div  class="loader__bar" *ngIf="loader"></div>
+
+        <div class="loader__bar" *ngIf="loader"></div>
+
+        <div class="loader__bar" *ngIf="loader"></div>
+
+        <div class="loader__bar" *ngIf="loader"></div>
+
+        <div class="loader__bar" *ngIf="loader"></div>
+
+        <div class="loader__ball" *ngIf="loader"></div>
+
       </div>
 
-      <div class="modal-body p-5 pt-0">
-        <form class="">
-          <div class="form-floating mb-3">
-            <input maxlength="12" class="form-control rounded-3" id="floatingInput" >
+    <div class="container" *ngIf="!loader" style="margin-left:90px;">
+
+    <div class="gfg-div">
+
+        <div class="gfg-logo"></div>
+
+        <div class="gfg-title">Welcome!</div>
+
+        <div class="gfg-sub-title">Unlock a world of digital experiences.</div>
+
+        <div class="gfg-input-fields">
+
+            <div class="gfg-email">
+
+                <svg class="svg-icon" viewBox="0 0 20 20">
+
+                    <path class="path1"
+
+                        d="M12.443,9.672c0.203-0.496,0.329-1.052,0.329-1.652c0-1.969-1.241-3.565-2.772-3.565S7.228,6.051,7.228,8.02c0,0.599,0.126,1.156,0.33,1.652c-1.379,0.555-2.31,1.553-2.31,2.704c0,1.75,2.128,3.169,4.753,3.169c2.624,0,4.753-1.419,4.753-3.169C14.753,11.225,13.821,10.227,12.443,9.672z M10,5.247c1.094,0,1.98,1.242,1.98,2.773c0,1.531-0.887,2.772-1.98,2.772S8.02,9.551,8.02,8.02C8.02,6.489,8.906,5.247,10,5.247z M10,14.753c-2.187,0-3.96-1.063-3.96-2.377c0-0.854,0.757-1.596,1.885-2.015c0.508,0.745,1.245,1.224,2.076,1.224s1.567-0.479,2.076-1.224c1.127,0.418,1.885,1.162,1.885,2.015C13.961,13.689,12.188,14.753,10,14.753z M10,0.891c-5.031,0-9.109,4.079-9.109,9.109c0,5.031,4.079,9.109,9.109,9.109c5.031,0,9.109-4.078,9.109-9.109C19.109,4.969,15.031,0.891,10,0.891z M10,18.317c-4.593,0-8.317-3.725-8.317-8.317c0-4.593,3.724-8.317,8.317-8.317c4.593,0,8.317,3.724,8.317,8.317C18.317,14.593,14.593,18.317,10,18.317z">
+
+                    </path>
+
+                </svg>
+
+                <input type="tel" placeholder="Mobile number" [(ngModel)]="login" maxlength="10" />
+
+            </div>  
+
+      <div *ngIf="login.length < 10 " class="error-message1"><i class="fa-solid fa-bug"></i>
+
+         Enter your 10-digit Mobile Number
+
+    </div>
+
+        </div>
+
+   
+
+        <button class="gfg-button" onclick="document.getElementById('id01').style.display='block'">Generate OTP</button>
+
+        <div id="id01" class="w3-modal">
+
+            <div class="w3-modal-content w3-card-4 rounded w3-animate-zoom" style="max-width:400px">
+
+       
+
+              <div class="w3-center"><br>
+
+                <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-xlarge w3-hover-red w3-display-topright" title="Close Modal">&times;</span>
+
+                <img src="assets/c.png" alt="Avatar" style="width:20%" class="w3-circle w3-margin-top">
+
+              </div>
+
+       
+
+              <form class="form">
+
+                <div class="title" style="margin-left: 650px;">OTP</div>
+
+                <div class="title">Verification Code</div>
+
+                 <p class="message">We have sent a verification code to your mobile number</p>
+
+                 <div class="inputs">
+
+                    <input id="input1" type="text" maxlength="1">
+
+                     <input id="input2" type="text" maxlength="1">
+
+                    <input id="input3" type="text" maxlength="1">
+
+                     <input id="input4" type="text" maxlength="1"> </div>
+
+                 <button class="gfg-button" style="margin-top: 40px; margin-left: 100px;">verify me</button>
+
+                 </form>
+
+       
+
+            </div>
 
           </div>
-          <div class="showInputField"></div>
-          <button class="w-100 mb-2 btn btn-lg rounded-3 btn-primary" type="submit">Generate OTP</button>
- 
-        </form>
-      </div>
-    </div>
-  </div>
-</div>
-</body>
-</html> -->
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<title>GFG Neumorphism Signin</title>
-	<meta name="description" content="" />
-	<meta name="viewport" content="width=device-width,
-								initial-scale=1" />
-	<style>
-		
-	</style>
-</head>
 
-<body>
-	<div class="gfg-div">
-		<div class="gfg-logo"></div>
-		<div class="gfg-title">Welcome!</div>
-		<div class="gfg-sub-title">Unlock a world of digital experiences.</div>
-		<div class="gfg-input-fields">
-			<div class="gfg-email">
-				<svg class="svg-icon" viewBox="0 0 20 20">
-					<path class="path1"
-						d="M12.443,9.672c0.203-0.496,0.329-1.052,0.329-1.652c0-1.969-1.241-3.565-2.772-3.565S7.228,6.051,7.228,8.02c0,0.599,0.126,1.156,0.33,1.652c-1.379,0.555-2.31,1.553-2.31,2.704c0,1.75,2.128,3.169,4.753,3.169c2.624,0,4.753-1.419,4.753-3.169C14.753,11.225,13.821,10.227,12.443,9.672z M10,5.247c1.094,0,1.98,1.242,1.98,2.773c0,1.531-0.887,2.772-1.98,2.772S8.02,9.551,8.02,8.02C8.02,6.489,8.906,5.247,10,5.247z M10,14.753c-2.187,0-3.96-1.063-3.96-2.377c0-0.854,0.757-1.596,1.885-2.015c0.508,0.745,1.245,1.224,2.076,1.224s1.567-0.479,2.076-1.224c1.127,0.418,1.885,1.162,1.885,2.015C13.961,13.689,12.188,14.753,10,14.753z M10,0.891c-5.031,0-9.109,4.079-9.109,9.109c0,5.031,4.079,9.109,9.109,9.109c5.031,0,9.109-4.078,9.109-9.109C19.109,4.969,15.031,0.891,10,0.891z M10,18.317c-4.593,0-8.317-3.725-8.317-8.317c0-4.593,3.724-8.317,8.317-8.317c4.593,0,8.317,3.724,8.317,8.317C18.317,14.593,14.593,18.317,10,18.317z">
-					</path>
-				</svg>
-				<input type="tel" placeholder="Mobile number" [(ngModel)]="login" maxlength="10" />
-			</div>	
-      <div *ngIf="login.length < 10 " class="error-message1"><i class="fa-solid fa-bug"></i>
-         Enter your 10-digit Mobile Number
+        <div class="gfg-link">
+
+            <a routerLink="/signup" routerLinkActive="active" href="Sign-up"> Get a new sim?</a>
+
+        </div>
+
     </div>
-		</div>
-    
-		<button class="gfg-button">Generate OTP</button>
-		<div class="gfg-link">
-			<a routerLink="/signup" routerLinkActive="active" href="Sign-up"> Get a new sim?</a>
-		</div>
-	</div>
+
+</div>
+
 </body>
+
 </html>

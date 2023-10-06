@@ -7,7 +7,7 @@
           <div class="row">
             <div class="col-sm-6 form-group">
               <label>Name</label>
-              <input type="text" placeholder="Enter First Name Here.." formControlName="firstName" class="form-control" />
+              <input type="text" [(ngModel)]="Cust.name" name="name" placeholder="Enter First Name Here.." formControlName="firstName" class="form-control"/>
               <div *ngIf="registerForm.get('firstName').errors  && submitted">
                 <div *ngIf="registerForm.get('firstName').hasError('required')">
                   <span style="color: red;">Please enter your name!</span>
@@ -27,13 +27,13 @@
           <div class="row">
             <div class="col-sm-6 form-group">
               <label>Email</label>
-              <input type="text" placeholder="Enter Email Address Here.." formControlName="email" class="form-control" />
+              <input type="text" [(ngModel)]="Cust.email" name="email" placeholder="Enter Email Address Here.." formControlName="email" class="form-control"/>
               <div *ngIf="registerForm.get('email').errors && submitted">
                 <div *ngIf="registerForm.get('email').hasError('required')">
                   <span style="color: red;">Please enter your email-id!</span>
                 </div>
                 <div *ngIf="registerForm.get('email').hasError('minlength')">
-                  <span style="color: red;">The email requires atleast 5 characters.</span>
+                  <span style="color: red;">The email requires atleast 5 characters</span>
                 </div>
                 <div *ngIf="registerForm.get('email').hasError('maxlength')">
                   <span style="color: red;">The email requires only 80 characters.</span>
@@ -45,10 +45,10 @@
             </div>
             <div class="form-group">
               <label>Phone Number</label>
-              <input type="text" placeholder="Enter Phone Number Here.." formControlName="phoneNumber" class="form-control" />
+              <input type="text" [(ngModel)]="Cust.phonenum" name="phonenum" placeholder="Enter Phone Number Here.." formControlName="phoneNumber" class="form-control" />
               <div *ngIf="registerForm.get('phoneNumber').errors && submitted">
                 <div *ngIf="registerForm.get('phoneNumber').hasError('required')">
-                  <span style="color: red;">Please Enter Phone Number.</span>
+                  <span style="color: red;">Please Enter Phone Number.</span> 
                 </div>
                 <div *ngIf="registerForm.get('phoneNumber').hasError('minlength')">
                   <span style="color: red;">Phone Number requied atleast 8 characters.</span>
@@ -64,7 +64,7 @@
             </div>
           <div formGroupName="addressGroup" class="form-group">
             <label>Address</label>
-            <textarea placeholder="Enter Address Here.." rows="2" formControlName="address" class="form-control"></textarea>
+            <textarea [(ngModel)]="Cust.address" name="address" placeholder="Enter Address Here.." rows="2" formControlName="address" class="form-control"></textarea>
             <div *ngIf="registerForm.get('addressGroup.address').errors && submitted">
               <div *ngIf="registerForm.get('addressGroup.address').hasError('required')">
                 <span style="color: red;">Please Enter Address.</span>
@@ -81,11 +81,11 @@
             </div>
             <div class="col-sm-4 form-group">
               <label>State</label>
-              <input type="text" placeholder="Enter State Name Here.." formControlName="state" class="form-control" />
+              <input type="text" placeholder="Enter State Name Here.." formControlName="state" class="form-control"/>
             </div>
             <div class="col-sm-4 form-group">
               <label>PinCode</label>
-              <input type="text" placeholder="Enter Zip Code Here.." formControlName="pincode" class="form-control" />
+              <input type="text" placeholder="Enter Zip Code Here.." formControlName="pincode" class="form-control"/>
               <div *ngIf="registerForm.get('addressGroup.pincode') && submitted">
                 <div *ngIf="registerForm.get('addressGroup.pincode').hasError('required')">
                   <span style="color: red;">Please Enter PinCode.</span>
